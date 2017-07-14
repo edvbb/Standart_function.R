@@ -1,0 +1,7 @@
+a = data.frame(a= c(1,2,3,4,5,6))
+a
+range01 <- function(x){(x-min(a$a))/(max(a$a)-min(a$a))}
+formulascale = function(x){(x-mean(a$a))/sd(a$a)}
+lapply(a$a, formulascale)
+b = data.frame(a = 6)
+lapply(b$a, formulascale)
